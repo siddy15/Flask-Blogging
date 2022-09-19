@@ -24,7 +24,7 @@ The first SQL command is `DROP TABLE IF EXISTS` posts;, this deletes any already
 ## Running your application 
 
 Firstly, install flask in your machine
-$ pip3 install flask 
+`$ pip3 install flask` 
 
 Once installed run `python -c "import flask; print(flask.__version__)"` to validate if the installation is success or not. 
 

@@ -23,7 +23,32 @@ The first SQL command is `DROP TABLE IF EXISTS` posts;, this deletes any already
 
 ## Running your application 
 
-$python3 app.py
+Firstly, install flask in your machine
+$ pip3 install flask 
+
+Once installed run `python -c "import flask; print(flask.__version__)"` to validate if the installation is success or not. 
+
+To validate if the flask server is up and running you can try below snippet (small hello flask code):
+
+```
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello():
+    return 'Hello, from Flask!'
+    
+if __name__ == "__main__":
+    app.run(debug=True)
+```
+
+In the init_db.py we are importing sqlite3 module and then opening a connection to db file, which will be created by running 
+`python3 init_db.py`
+
+If this run is success you will see that a new database.db file will appear in your main directory. If you see something like this means you are on track to setup your application. 
+
+`$ python3 app.py`
 
 ```
 'FLASK_ENV' is deprecated and will not be used in Flask 2.3. Use 'FLASK_DEBUG' instead.
